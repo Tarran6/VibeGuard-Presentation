@@ -12,11 +12,16 @@
         .gradient-text { background: linear-gradient(135deg, #00f2fe 10%, #4facfe 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; filter: drop-shadow(0 0 15px rgba(0, 242, 254, 0.4)); }
         section { min-height: 100vh; display: flex; align-items: center; padding: 5% 10%; position: relative; border-bottom: 1px solid rgba(0, 242, 254, 0.05); background-size: cover; background-position: center; background-repeat: no-repeat; }
         .glass { background: rgba(5, 5, 10, 0.85); backdrop-filter: blur(30px); border: 1px solid rgba(0, 242, 254, 0.15); border-radius: 40px; padding: 3.5rem; width: 100%; position: relative; z-index: 10; }
-        .watermark { position: absolute; font-family: 'Orbitron'; font-weight: 900; font-size: 15vw; color: rgba(0, 242, 254, 0.02); z-index: 1; pointer-events: none; white-space: nowrap; }
+        
+        /* Психологические водяные знаки */
+        .watermark { position: absolute; font-family: 'Orbitron'; font-weight: 900; font-size: 12vw; color: rgba(0, 242, 254, 0.015); z-index: 1; pointer-events: none; white-space: nowrap; text-transform: uppercase; }
+        
         .scan-line { width: 100%; height: 3px; background: #00f3ff; position: absolute; top: 0; left: 0; animation: scan 3s cubic-bezier(0.4, 0, 0.2, 1) infinite; box-shadow: 0 0 20px #00f3ff; z-index: 20; opacity: 0.6; }
         @keyframes scan { 0% { top: 0%; opacity: 0; } 50% { opacity: 0.8; } 100% { top: 100%; opacity: 0; } }
+        
         .glow-card { transition: all 0.4s ease; border: 1px solid rgba(255,255,255,0.05); background: rgba(0, 0, 0, 0.6); backdrop-filter: blur(10px); }
         .glow-card:hover { border-color: #00f3ff; box-shadow: 0 0 30px rgba(0, 243, 255, 0.2); transform: translateY(-5px); }
+        
         .photo-frame { width: 160px; height: 160px; border: 2px solid #00f3ff; border-radius: 35px; overflow: hidden; margin: 0 auto; box-shadow: 0 0 25px rgba(0, 243, 255, 0.3); background: #000; }
         .founder-img { width: 100%; height: 100%; object-fit: cover; }
     </style>
@@ -30,48 +35,48 @@
     </div>
 
     <section style="background-image: linear-gradient(rgba(1,1,3,0.7), rgba(1,1,3,0.8)), url('https://raw.githubusercontent.com/Tarran6/VibeGuard-Presentation/main/web.png');" class="flex-col justify-center text-center">
-        <div class="watermark" style="top: 10%; left: -5%;">SECURE</div>
+        <div class="watermark" style="top: 15%; left: -2%;">TRUSTED</div>
         <div class="glass max-w-5xl">
             <div class="scan-line"></div>
             <img src="https://raw.githubusercontent.com/Tarran6/VibeGuard-Presentation/main/web8.png" 
-                 alt="VibeGuard Apex"
-                 class="w-48 h-auto mx-auto mb-8 drop-shadow-[0_0_20px_rgba(0,242,254,0.6)] object-contain">
+                 class="w-56 h-auto mx-auto mb-10 drop-shadow-[0_0_25px_rgba(0,242,254,0.7)] object-contain">
             
             <div class="mb-6 px-8 py-2 border border-cyan-500/50 rounded-full inline-block text-cyan-400 text-xs tracking-[0.6em] orbitron uppercase animate-pulse">opBNB Mainnet Guardian</div>
             <h1 class="orbitron text-7xl md:text-9xl font-black gradient-text mb-6 tracking-tighter uppercase">VibeGuard</h1>
             <p class="text-2xl md:text-3xl text-gray-300 font-extralight uppercase tracking-[0.4em] mb-8 italic">The <span class="text-cyan-400 font-bold">Apex</span> of Web3 Security</p>
+            <p class="text-[8px] orbitron text-gray-700 tracking-[10px] uppercase opacity-50">No more excuses. No more losses.</p>
         </div>
     </section>
 
-    <section style="background-image: linear-gradient(rgba(1,0,0,0.85), rgba(1,1,3,0.95)), url('https://raw.githubusercontent.com/Tarran6/VibeGuard-Presentation/main/web3.png');" class="flex-col justify-center">
-        <div class="watermark" style="bottom: 5%; right: -5%;">THREAT</div>
+    <section style="background-image: linear-gradient(rgba(1,0,0,0.8), rgba(1,1,3,0.9)), url('https://raw.githubusercontent.com/Tarran6/VibeGuard-Presentation/main/web9.png');" class="flex-col justify-center">
+        <div class="watermark" style="bottom: 10%; right: -2%;">DANGER</div>
         <div class="glass max-w-6xl mx-auto border-red-500/20">
-            <h2 class="orbitron text-4xl md:text-6xl font-black text-white mb-10 uppercase tracking-tight leading-tight">The Price of <span class="text-red-500">Ignorance</span></h2>
+            <h2 class="orbitron text-4xl md:text-6xl font-black text-white mb-10 uppercase tracking-tight">The Price of <span class="text-red-500">Ignorance</span></h2>
             <div class="grid md:grid-cols-3 gap-12 text-center">
                 <div class="space-y-4">
                     <div class="orbitron text-5xl font-bold text-red-500">$2.1B+</div>
-                    <p class="text-[10px] text-gray-400 uppercase tracking-widest leading-loose">Stolen in Web3 Exploits (2025). Pure devastation.</p>
+                    <p class="text-[10px] text-gray-400 uppercase tracking-widest leading-loose font-bold">Stolen in Web3 Exploits (2025). The cost of being unprotected.</p>
                 </div>
                 <div class="space-y-4">
                     <div class="orbitron text-5xl font-bold text-red-500">90%</div>
-                    <p class="text-[10px] text-gray-400 uppercase tracking-widest leading-loose">Of new contracts contain invisible malicious bytecode.</p>
+                    <p class="text-[10px] text-gray-400 uppercase tracking-widest leading-loose font-bold">Of new tokens contain malicious backdoors. You can't see them. AI can.</p>
                 </div>
                 <div class="space-y-4">
                     <div class="orbitron text-5xl font-bold text-red-500">&lt; 1s</div>
-                    <p class="text-[10px] text-gray-400 uppercase tracking-widest leading-loose">Window between detection and loss. Seconds save millions.</p>
+                    <p class="text-[10px] text-gray-400 uppercase tracking-widest leading-loose font-bold">Execution time for a drainer. Reaction must be instant.</p>
                 </div>
             </div>
-            <p class="mt-12 text-center text-gray-600 orbitron text-[10px] tracking-[5px]">99.9% UPTIME PROTECTION • AI-VALIDATED SHIELD</p>
+            <p class="mt-12 text-center text-gray-500 orbitron text-[9px] tracking-[6px] uppercase italic">Fear is a choice. Security is a tool.</p>
         </div>
     </section>
 
     <section style="background-image: linear-gradient(rgba(1,1,3,0.95), rgba(1,1,3,0.95)), url('https://raw.githubusercontent.com/Tarran6/VibeGuard-Presentation/main/web1.png');" class="flex-col justify-center">
-        <div class="watermark" style="top: 20%; left: 10%;">ARCHITECTS</div>
-        <h2 class="orbitron text-4xl text-center mb-20 text-white uppercase tracking-[0.4em]">The Founders</h2>
+        <div class="watermark" style="top: 25%; left: 5%;">FOUNDERS</div>
+        <h2 class="orbitron text-4xl text-center mb-20 text-white uppercase tracking-[0.4em]">The Architects</h2>
         <div class="grid md:grid-cols-2 gap-16 w-full max-w-4xl mx-auto">
             <div class="glow-card p-10 rounded-[40px] text-center border-cyan-500/30">
                 <div class="photo-frame mb-8">
-                    <img src="https://raw.githubusercontent.com/Tarran6/VibeGuard-Presentation/main/me.png" class="founder-img" alt="Founder">
+                    <img src="https://raw.githubusercontent.com/Tarran6/VibeGuard-Presentation/main/me.png" class="founder-img" alt="Taran V.S">
                 </div>
                 <h3 class="orbitron text-2xl text-white uppercase">Taran V.S</h3>
                 <p class="text-cyan-400 text-xs font-bold uppercase tracking-widest mt-3">Lead Developer</p>
@@ -81,70 +86,42 @@
                     <img src="https://raw.githubusercontent.com/Tarran6/VibeGuard-Presentation/main/gemini.png" class="founder-img grayscale">
                 </div>
                 <h3 class="orbitron text-2xl text-white uppercase">Hybrid AI</h3>
-                <p class="text-purple-400 text-xs font-bold uppercase tracking-widest mt-3">Neural Engine</p>
+                <p class="text-purple-400 text-xs font-bold uppercase tracking-widest mt-3">Neural Co-Pilot</p>
             </div>
         </div>
     </section>
 
-    <section style="background-image: linear-gradient(rgba(1,1,3,0.9), rgba(1,1,3,0.9)), url('https://raw.githubusercontent.com/Tarran6/VibeGuard-Presentation/main/web4.png');">
-        <div class="watermark" style="top: 10%; right: 0%;">HYBRID</div>
-        <div class="w-full grid md:grid-cols-2 gap-20 items-center">
-            <div class="space-y-12">
-                <h2 class="orbitron text-6xl font-black text-white uppercase leading-tight">Hybrid AI<br><span class="text-cyan-400 text-4xl">Total Control</span></h2>
-                <div class="glow-card p-8 rounded-3xl border-l-4 border-l-cyan-500">
-                    <h4 class="orbitron text-cyan-400 text-xl mb-3 uppercase">Neural Redundancy</h4>
-                    <p class="text-gray-400 leading-relaxed text-sm">Gemini-Pro + Groq (Llama-3). sub-second monitoring of opBNB blocks.</p>
-                </div>
-                <div class="glow-card p-8 rounded-3xl border-l-4 border-l-purple-500">
-                    <h4 class="orbitron text-purple-400 text-xl mb-3 uppercase">Verified Performance</h4>
-                    <p class="text-gray-400 leading-relaxed text-sm">Real-time analysis of 3.5+ BNB institutional whale flows.</p>
-                </div>
-            </div>
-            <div class="glass border-cyan-500/30 p-10">
-                <div class="code-font text-xs space-y-4 text-cyan-400/80">
-                    <p class="text-gray-600">>> INITIALIZING_VIBEGUARD_v4.6</p>
-                    <p class="text-green-400">[SYSTEM] Neural Cascade: ACTIVE</p>
-                    <p class="text-white font-bold">[DETECTED] Whale Move: 3.5000 BNB</p>
-                    <p class="text-blue-400">[ACTION] Alert sent to Telegram bot</p>
-                    <div class="w-full bg-gray-900 h-1 mt-6 rounded-full overflow-hidden">
-                        <div class="bg-cyan-500 h-full w-full animate-pulse"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="flex-col justify-center bg-[#010103]">
-        <div class="watermark" style="bottom: 0; left: 0;">DOMINANCE</div>
-        <h2 class="orbitron text-4xl text-center mb-20 text-white uppercase tracking-[0.5em]">The Roadmap</h2>
+    <section style="background-image: linear-gradient(rgba(1,1,3,0.9), rgba(1,1,3,0.9)), url('https://raw.githubusercontent.com/Tarran6/VibeGuard-Presentation/main/web4.png');" class="flex-col justify-center">
+        <div class="watermark" style="bottom: 15%; left: 0%;">FUTURE</div>
+        <h2 class="orbitron text-4xl text-center mb-20 text-white uppercase tracking-[0.5em]">Future Dominance</h2>
         <div class="grid md:grid-cols-3 gap-10 w-full">
             <div class="glow-card p-10 rounded-[45px] text-center border border-white/5 opacity-80 hover:opacity-100 transition-opacity">
                 <h5 class="orbitron text-gray-500 text-sm mb-8 uppercase tracking-widest">Sentinel</h5>
                 <div class="text-5xl font-black mb-8 italic">FREE</div>
-                <p class="text-[10px] text-gray-500 uppercase tracking-widest leading-loose">Essential monitoring<br>Whale alerts</p>
+                <p class="text-[10px] text-gray-500 uppercase tracking-widest leading-loose font-bold italic underline">Public access enabled</p>
             </div>
             <div class="glow-card p-12 bg-cyan-500/10 border-2 border-cyan-500 rounded-[45px] text-center scale-105 shadow-[0_0_50px_rgba(0,243,255,0.2)]">
                 <h5 class="orbitron text-white text-sm mb-8 tracking-widest uppercase">AI Auditor Pro</h5>
                 <div class="text-5xl font-black mb-8 italic">$199<span class="text-sm font-normal">/mo</span></div>
-                <p class="text-[10px] text-white uppercase tracking-widest leading-loose font-bold">Deep AI Contract Audit<br>Hybrid Model Verdicts</p>
+                <p class="text-[10px] text-white uppercase tracking-widest leading-loose font-bold">Deep Neural Contract Audit<br>Hybrid AI Verdicts</p>
             </div>
             <div class="glow-card p-10 rounded-[45px] text-center border border-white/5 opacity-80 hover:opacity-100 transition-opacity">
                 <h5 class="orbitron text-purple-500 text-sm mb-8 uppercase tracking-widest">Enterprise</h5>
                 <div class="text-5xl font-black mb-8 italic">B2B</div>
-                <p class="text-[10px] text-gray-500 uppercase tracking-widest leading-loose">Ecosystem Protection<br>Custom API Access</p>
+                <p class="text-[10px] text-gray-500 uppercase tracking-widest leading-loose font-bold underline italic">Custom integration only</p>
             </div>
         </div>
     </section>
 
     <section style="background-image: linear-gradient(rgba(1,1,3,0.8), rgba(1,1,3,0.8)), url('https://raw.githubusercontent.com/Tarran6/VibeGuard-Presentation/main/web7.png');" class="flex-col justify-center text-center">
-        <div class="watermark" style="top: 0; right: -10%;">SHIELD</div>
+        <div class="watermark" style="top: 0; right: -5%;">SECURE</div>
         <div class="glass p-20 max-w-5xl">
             <h2 class="orbitron text-9xl font-black mb-12 uppercase italic tracking-tighter">VIBE<span class="gradient-text">GUARD</span></h2>
             <div class="flex flex-wrap justify-center gap-8 mb-16">
-                <a href="https://t.me/VibeGuard_AI_bot" target="_blank" class="px-16 py-8 bg-cyan-600 rounded-full orbitron font-bold text-2xl hover:shadow-[0_0_40px_#00f3ff] transition-all text-white uppercase tracking-widest">Launch Sentinel</a>
-                <a href="https://t.me/tarran6" target="_blank" class="px-16 py-8 border-2 border-white/20 rounded-full orbitron font-bold text-2xl hover:bg-white/10 transition-all text-white uppercase tracking-widest">Contact Founder</a>
+                <a href="https://t.me/VibeGuard_AI_bot" target="_blank" class="px-16 py-8 bg-cyan-600 rounded-full orbitron font-bold text-2xl hover:shadow-[0_0_40px_#00f3ff] transition-all text-white uppercase tracking-widest">Launch Now</a>
+                <a href="https://t.me/tarran6" target="_blank" class="px-16 py-8 border-2 border-white/20 rounded-full orbitron font-bold text-2xl hover:bg-white/10 transition-all text-white uppercase tracking-widest">Contact</a>
             </div>
-            <p class="orbitron text-[9px] text-gray-700 tracking-[8px] uppercase">Validated for opBNB Mainnet • Powered by VibeGuard AI</p>
+            <p class="orbitron text-[9px] text-gray-700 tracking-[8px] uppercase">99.9% Uptime Verified • opBNB Mainnet Guardian</p>
         </div>
     </section>
 
