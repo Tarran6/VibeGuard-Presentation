@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VibeGuard AI | Ultra Pitch Deck</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;600&family=Fira+Code:wght@400&display=swap" rel="stylesheet">
+    <style>
+        body { background-color: #020205; color: #e0e0e0; font-family: 'Inter', sans-serif; overflow-x: hidden; scroll-behavior: smooth; }
+        .orbitron { font-family: 'Orbitron', sans-serif; }
+        .code-font { font-family: 'Fira Code', monospace; }
+        .gradient-text { background: linear-gradient(90deg, #00f2fe 0%, #4facfe 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        
+        section { min-height: 100vh; display: flex; align-items: center; padding: 5% 8%; position: relative; background-size: cover; background-position: center; border-bottom: 1px solid rgba(0, 242, 254, 0.1); }
+        .glass { background: rgba(0, 0, 0, 0.85); backdrop-filter: blur(20px); border: 1px solid rgba(0, 242, 254, 0.2); border-radius: 30px; padding: 2.5rem; width: 100%; position: relative; z-index: 10; }
+
+        .scan-line { width: 100%; height: 2px; background: rgba(0, 243, 255, 0.5); position: absolute; top: 0; left: 0; animation: scan 4s linear infinite; box-shadow: 0 0 15px #00f3ff; z-index: 20; }
+        @keyframes scan { 0% { top: 0%; } 100% { top: 100%; } }
+
+        .stat-bar { height: 4px; background: #1a1a1a; border-radius: 2px; overflow: hidden; margin-top: 8px; }
+        .stat-progress { height: 100%; background: #00f3ff; animation: progress 2.5s ease-in-out infinite; }
+        @keyframes progress { 0% { width: 0%; } 50% { width: 85%; } 100% { width: 100%; } }
+
+        /* Твои оригинальные фоны с авто-подбором расширения через JS ниже */
+        .slide-0 { background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url('web.png'); }
+        .slide-1 { background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('web1.png'); }
+        .slide-2 { background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('web2.png'); }
+        .slide-3 { background-image: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('web3.png'); }
+        .slide-4 { background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('web4.png'); }
+        .slide-7 { background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('web7.png'); }
+
+        .photo-frame { width: 190px; height: 190px; border: 2px solid #00f3ff; border-radius: 24px; overflow: hidden; margin: 0 auto; box-shadow: 0 0 25px rgba(0, 243, 255, 0.3); }
+        .founder-img { width: 100%; height: 100%; object-fit: cover; }
+    </style>
+</head>
+<body>
+
+    <div class="fixed top-6 right-8 z-50">
+        <a href="https://vibe-guard-web.vercel.app" target="_blank" class="px-6 py-2 bg-black/60 border border-cyan-500/30 rounded-full text-[10px] orbitron text-cyan-400 hover:bg-cyan-400 hover:text-black transition-all uppercase tracking-widest">
+            Main Portal →
+        </a>
+    </div>
+
+    <section class="slide-0 flex-col justify-center text-center">
+        <div class="glass max-w-4xl">
+            <div class="scan-line"></div>
+            <div class="mb-4 px-6 py-1 border border-cyan-500 rounded-full inline-block text-cyan-400 text-[10px] tracking-[0.5em] orbitron uppercase">Network: opBNB Mainnet</div>
+            <h1 class="orbitron text-6xl md:text-9xl font-bold gradient-text mb-4 uppercase tracking-tighter">VIBEGUARD AI</h1>
+            <p class="text-xl md:text-2xl text-gray-400 font-light italic uppercase tracking-widest">The Cyber-Sentinel of Web3</p>
+        </div>
+    </section>
+
+    <section class="bg-[#020205] flex-col">
+        <div class="glass max-w-6xl mx-auto">
+            <h2 class="orbitron text-3xl text-center mb-16 gradient-text uppercase tracking-[0.3em]">Architects of the Shield</h2>
+            <div class="grid md:grid-cols-3 gap-12 items-center text-center">
+                <div>
+                    <div class="photo-frame">
+                        <img src="me.png" class="founder-img" onerror="this.onerror=null; this.src='me.jpg';">
+                    </div>
+                    <h3 class="orbitron text-2xl text-white mt-6 uppercase">Taran V.S</h3>
+                    <p class="text-cyan-400 font-bold text-xs uppercase tracking-widest">Lead Developer</p>
+                </div>
+                <div class="space-y-6">
+                    <div class="orbitron text-7xl text-white font-extrabold tracking-tighter">48H</div>
+                    <p class="text-gray-500 text-xs code-font uppercase italic leading-loose">"Building a secure future for opBNB in a 48-hour sprint."</p>
+                </div>
+                <div>
+                    <div class="photo-frame">
+                        <img src="gemini.png" class="founder-img" onerror="this.onerror=null; this.src='https://raw.githubusercontent.com/Tarran6/VibeGuard-AI/main/logo.png';">
+                    </div>
+                    <h3 class="orbitron text-2xl text-white mt-6 uppercase">Gemini AI</h3>
+                    <p class="text-purple-400 font-bold text-xs uppercase tracking-widest">Architect / Co-Pilot</p>
+                </div>
+            </div>
+            
+            <div class="mt-16 pt-10 border-t border-white/10 grid md:grid-cols-2 gap-12 text-gray-400">
+                <div class="space-y-4">
+                    <p><b>VibeGuard AI</b> is a next-generation security protocol. It monitors the <b>opBNB mainnet</b> block by block, identifying malicious logic in real-time.</p>
+                    <p>Our sentinel uses high-speed RPC nodes to audit contract bytecode before harmful actions occur.</p>
+                </div>
+                <div class="bg-black/80 p-6 rounded-2xl border border-cyan-500/30 code-font text-[10px] text-cyan-400">
+                    <div class="flex justify-between mb-4"><span class="animate-pulse">> INITIALIZING_LOGIC_SCAN...</span> <span class="text-gray-500">v1.0.4</span></div>
+                    <div class="space-y-2">
+                        <p class="text-green-500">Block 19245582: OK</p>
+                        <p class="text-red-500">Warning: Malicious Logic at 0x71...af</p>
+                        <p class="text-cyan-400">System: Honeypot Protection Active</p>
+                    </div>
+                    <div class="stat-bar mt-6"><div class="stat-progress"></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide-4 grid md:grid-cols-2 gap-12">
+        <div class="glass">
+            <h2 class="orbitron text-3xl text-cyan-400 mb-8 uppercase tracking-widest">Live Sentinel</h2>
+            <div class="space-y-8 mb-10">
+                <div class="flex items-start gap-4 p-4 bg-cyan-500/5 rounded-xl border-l-2 border-cyan-500">
+                    <span class="text-2xl">🛡️</span>
+                    <div>
+                        <h4 class="text-white font-bold uppercase text-sm">Real-Time Risk Scoring</h4>
+                        <p class="text-xs text-gray-500 mt-1 uppercase">Instant 0-100 analysis for every contract.</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4 p-4 bg-purple-500/5 rounded-xl border-l-2 border-purple-500">
+                    <span class="text-2xl">🐳</span>
+                    <div>
+                        <h4 class="text-white font-bold uppercase text-sm">Whale Tracking</h4>
+                        <p class="text-xs text-gray-500 mt-1 uppercase">Monitor large liquidity movements.</p>
+                    </div>
+                </div>
+            </div>
+            <a href="https://t.me/VibeGuard_AI_bot" target="_blank" class="block w-full py-5 bg-cyan-600 rounded-2xl text-center orbitron font-bold hover:shadow-[0_0_25px_#00f3ff] transition-all text-white uppercase tracking-widest">
+                Launch Sentinel Bot
+            </a>
+        </div>
+        <div class="flex justify-center relative">
+             <div class="absolute inset-0 bg-cyan-500/10 blur-[120px] rounded-full"></div>
+             <img src="bot-screen.png" class="w-[300px] rounded-[3.5rem] border-8 border-gray-900 shadow-2xl z-10" onerror="this.src='web4.png'">
+        </div>
+    </section>
+
+    <section class="slide-7 flex-col justify-center text-center">
+        <div class="glass p-16 max-w-4xl overflow-hidden">
+            <h2 class="orbitron text-7xl font-bold mb-12 uppercase italic tracking-tighter">The <span class="gradient-text">Shield</span></h2>
+            
+            <div class="flex flex-wrap justify-center gap-6 mb-12">
+                <a href="https://t.me/VibeGuard_AI_bot" target="_blank" class="px-14 py-6 bg-cyan-600 rounded-full orbitron font-bold text-xl hover:bg-cyan-400 transition-all text-white uppercase shadow-[0_10px_30px_rgba(0,243,255,0.3)]">Launch Bot</a>
+                <a href="https://github.com/Tarran6/VibeGuard-AI" target="_blank" class="px-14 py-6 border border-white/20 rounded-full orbitron font-bold text-xl hover:bg-white/10 transition-all text-white uppercase">Github</a>
+            </div>
+            
+            <div class="flex justify-center gap-12 mb-12">
+                <a href="https://x.com/tarran66" target="_blank" class="text-cyan-400 orbitron text-xs hover:text-white uppercase tracking-[3px] transition-colors">Twitter (X)</a>
+                <a href="https://t.me/HaterrAI_bot" target="_blank" class="text-cyan-400 orbitron text-xs hover:text-white uppercase tracking-[3px] transition-colors">Lead Bot</a>
+            </div>
+
+            <div class="pt-10 border-t border-white/5 uppercase text-[9px] tracking-[4px] text-gray-700">
+                <p>© 2026 VibeGuard AI Project</p>
+                <p class="mt-3 leading-loose">Licensed under MIT | Developed by Taran V.S & Gemini AI</p>
+            </div>
+        </div>
+    </
