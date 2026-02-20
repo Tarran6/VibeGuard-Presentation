@@ -3,133 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VibeGuard AI | Neural Sentinel</title>
+    <title>VibeGuard AI | The Security Apex</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&family=Inter:wght@300;800&display=swap" rel="stylesheet">
     <style>
+        body { background-color: #010103; color: #f0f0f0; font-family: 'Inter', sans-serif; overflow-x: hidden; scroll-behavior: smooth; }
         .orbitron { font-family: 'Orbitron', sans-serif; }
-        body { background-color: #010103; color: white; font-family: 'Inter', sans-serif; overflow-x: hidden; scroll-behavior: smooth; }
+        .gradient-text { background: linear-gradient(135deg, #00f2fe 10%, #4facfe 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; filter: drop-shadow(0 0 15px rgba(0, 242, 254, 0.4)); }
         
-        /* Главный фон всего сайта */
-        .main-bg {
-            background-image: linear-gradient(rgba(1,1,3,0.85), rgba(1,1,3,0.95)), url('web.png');
-            background-size: cover; background-position: center; background-attachment: fixed;
+        section { 
+            min-height: 100vh; display: flex; align-items: center; padding: 5% 10%; position: relative; 
+            border-bottom: 1px solid rgba(0, 242, 254, 0.05); background-size: cover; background-position: center; background-repeat: no-repeat; 
         }
-
-        .glow-card {
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(12px);
-            transition: 0.4s ease;
-        }
-
-        /* Твой главный визуальный элемент в центре */
-        .hero-main-art {
-            width: 100%; max-width: 800px;
-            filter: drop-shadow(0 0 50px rgba(59, 130, 246, 0.4));
-            animation: pulse-glow 4s ease-in-out infinite;
-        }
-
-        @keyframes pulse-glow {
-            0%, 100% { filter: drop-shadow(0 0 30px rgba(59, 130, 246, 0.3)); transform: scale(1); }
-            50% { filter: drop-shadow(0 0 60px rgba(59, 130, 246, 0.6)); transform: scale(1.02); }
-        }
-
-        .profile-frame {
-            border: 1px solid rgba(59, 130, 246, 0.3);
-            transition: 0.5s;
-        }
-        .profile-frame:hover { border-color: #ef4444; box-shadow: 0 0 20px rgba(239, 68, 68, 0.3); }
+        
+        .glass { background: rgba(5, 5, 10, 0.85); backdrop-filter: blur(30px); border: 1px solid rgba(0, 242, 254, 0.15); border-radius: 40px; padding: 3.5rem; width: 100%; position: relative; z-index: 10; }
+        
+        .watermark { position: absolute; font-family: 'Orbitron'; font-weight: 900; font-size: 12vw; color: rgba(0, 242, 254, 0.012); z-index: 1; pointer-events: none; white-space: nowrap; text-transform: uppercase; }
+        
+        .scan-line { width: 100%; height: 3px; background: #00f3ff; position: absolute; top: 0; left: 0; animation: scan 3s cubic-bezier(0.4, 0, 0.2, 1) infinite; box-shadow: 0 0 20px #00f3ff; z-index: 20; opacity: 0.6; }
+        @keyframes scan { 0% { top: 0%; opacity: 0; } 50% { opacity: 0.8; } 100% { top: 100%; opacity: 0; } }
+        
+        .glow-card { transition: all 0.4s ease; border: 1px solid rgba(255,255,255,0.05); background: rgba(0, 0, 0, 0.6); backdrop-filter: blur(10px); }
+        .glow-card:hover { border-color: #00f3ff; box-shadow: 0 0 30px rgba(0, 243, 255, 0.2); transform: translateY(-5px); }
+        
+        .photo-frame { width: 180px; height: 180px; border: 2px solid #00f3ff; border-radius: 35px; overflow: hidden; margin: 0 auto; box-shadow: 0 0 25px rgba(0, 243, 255, 0.3); background: #000; }
+        .founder-img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(100%); transition: 0.5s; }
+        .photo-frame:hover .founder-img { filter: grayscale(0%); transform: scale(1.1); }
     </style>
 </head>
-<body class="main-bg">
+<body>
 
-    <header class="min-h-screen flex flex-col justify-center items-center py-20 px-4 relative">
-        <p class="orbitron text-blue-500 tracking-[0.8em] uppercase mb-6 text-xs md:text-sm animate-pulse">Neural Security Active</p>
-        
-        <img src="web9.png" class="hero-main-art mb-10 z-10" alt="VibeGuard Core Architecture">
-        
-        <h1 class="orbitron text-4xl md:text-7xl font-bold tracking-[0.4em] text-center z-10 uppercase mb-6">VIBEGUARD AI</h1>
-        <p class="orbitron text-gray-400 text-center tracking-[0.3em] max-w-2xl text-[10px] md:text-xs uppercase px-6">
-            Global Sentinel // Intent Recognition // opBNB Ecosystem
-        </p>
-        
-        <div class="mt-14 z-10">
-            <a href="https://t.me/VibeGuard_AI_bot" class="bg-blue-600 hover:bg-blue-700 text-white px-12 py-4 orbitron tracking-[0.4em] transition-all text-xs font-bold shadow-2xl">LAUNCH SENTINEL</a>
-        </div>
-    </header>
-
-    <section class="py-24 bg-black/60 backdrop-blur-md border-y border-white/5">
-        <h2 class="orbitron text-3xl text-center mb-16 tracking-[0.5em] uppercase text-gray-500">The Architects</h2>
-        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-10 px-4">
-            <div class="text-center group">
-                <img src="me.png" class="profile-frame w-full h-72 object-cover mb-6 grayscale hover:grayscale-0" alt="Tarran">
-                <h4 class="orbitron text-blue-400 text-sm tracking-widest uppercase">Tarran // Lead Architect</h4>
-            </div>
-            <div class="text-center group">
-                <img src="gemini.png" class="profile-frame w-full h-72 object-cover mb-6 grayscale hover:grayscale-0" alt="Sentinel">
-                <h4 class="orbitron text-red-500 text-sm tracking-widest uppercase">Sentinel // Neural Core</h4>
-            </div>
-            <div class="text-center group">
-                <img src="me1.png" class="profile-frame w-full h-72 object-cover mb-6 grayscale hover:grayscale-0" alt="Engine">
-                <h4 class="orbitron text-purple-400 text-sm tracking-widest uppercase">VibeGuard Engine v10.5</h4>
-            </div>
+    <section style="background-image: linear-gradient(rgba(1,1,3,0.7), rgba(1,1,3,0.8)), url('web.png');" class="flex-col justify-center text-center">
+        <div class="watermark" style="top: 10%; left: -5%;">SECURE</div>
+        <div class="glass max-w-5xl">
+            <div class="scan-line"></div>
+            <img src="web8.png" alt="VibeGuard Apex" class="w-56 h-auto mx-auto mb-8 drop-shadow-[0_0_30px_rgba(0,242,254,0.6)] object-contain">
+            
+            <div class="mb-6 px-8 py-2 border border-cyan-500/50 rounded-full inline-block text-cyan-400 text-xs tracking-[0.6em] orbitron uppercase animate-pulse">opBNB Mainnet Guardian</div>
+            <h1 class="orbitron text-7xl md:text-9xl font-black gradient-text mb-6 tracking-tighter uppercase">VibeGuard</h1>
+            <p class="text-2xl md:text-3xl text-gray-300 font-extralight uppercase tracking-[0.4em] mb-8 italic">The <span class="text-cyan-400 font-bold">Apex</span> of Web3 Security</p>
         </div>
     </section>
 
-    <section class="py-32 px-4 relative">
-        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
-            <div>
-                <h2 class="orbitron text-4xl mb-8 tracking-[0.3em] uppercase">Neural Chain Defense</h2>
-                <p class="text-gray-400 text-[10px] uppercase tracking-widest leading-loose mb-10">
-                    VibeGuard monitors the opBNB mempool in real-time, identifying malicious contract patterns and honeypot traps before they can execute a drain.
-                </p>
-                <div class="flex gap-4">
-                    <img src="me2.png" class="w-1/2 border border-white/10" alt="Chain 1">
-                    <img src="me3.png" class="w-1/2 border border-white/10" alt="Chain 2">
+    <section style="background-image: linear-gradient(rgba(1,0,0,0.85), rgba(1,1,3,0.95)), url('web9.png');" class="flex-col justify-center">
+        <div class="watermark" style="bottom: 5%; right: -5%;">LOSS</div>
+        <div class="glass max-w-6xl mx-auto border-red-500/20">
+            <h2 class="orbitron text-4xl md:text-6xl font-black text-white mb-10 uppercase tracking-tight leading-tight">The Price of <span class="text-red-500">Ignorance</span></h2>
+            <div class="grid md:grid-cols-3 gap-12 text-center">
+                <div class="space-y-4">
+                    <div class="orbitron text-5xl font-bold text-red-500">$3.4B+</div>
+                    <p class="text-[10px] text-gray-400 uppercase tracking-widest leading-loose">Lost to Web3 exploits & scams in 2025.</p>
+                </div>
+                <div class="space-y-4">
+                    <div class="orbitron text-5xl font-bold text-red-500">90%</div>
+                    <p class="text-[10px] text-gray-400 uppercase tracking-widest leading-loose">Retail investors drained by hidden rug-pulls.</p>
+                </div>
+                <div class="space-y-4">
+                    <div class="orbitron text-5xl font-bold text-red-500">< 2s</div>
+                    <p class="text-[10px] text-gray-400 uppercase tracking-widest leading-loose">Average time for an AI Neural Verdict.</p>
                 </div>
             </div>
-            <div class="glow-card p-2">
-                <img src="bot-screen.png" class="w-full h-auto opacity-90" alt="Alert Demo">
+        </div>
+    </section>
+
+    <section style="background-image: linear-gradient(rgba(1,1,3,0.95), rgba(1,1,3,0.95)), url('web1.png');" class="flex-col justify-center">
+        <div class="watermark" style="top: 20%; left: 10%;">TRUST</div>
+        <h2 class="orbitron text-4xl text-center mb-20 text-white uppercase tracking-[0.4em]">Architects</h2>
+        <div class="grid md:grid-cols-2 gap-16 w-full max-w-4xl mx-auto">
+            <div class="glow-card p-10 rounded-[40px] text-center">
+                <div class="photo-frame mb-8">
+                    <img src="me.png" class="founder-img" alt="Founder">
+                </div>
+                <h3 class="orbitron text-2xl text-white uppercase tracking-widest">Taran V.S</h3>
+                <p class="text-cyan-400 text-xs font-bold uppercase tracking-widest mt-3">Lead Developer // AI Architect</p>
+            </div>
+            <div class="glow-card p-10 rounded-[40px] text-center">
+                <div class="photo-frame mb-8">
+                    <img src="gemini.png" class="founder-img grayscale contrast-125">
+                </div>
+                <h3 class="orbitron text-2xl text-white uppercase tracking-widest">Sentinel</h3>
+                <p class="text-purple-400 text-xs font-bold uppercase tracking-widest mt-3">Neural Security Co-Pilot</p>
             </div>
         </div>
     </section>
 
-    <section class="py-32 bg-black/40 border-y border-white/5">
-        <h2 class="orbitron text-3xl text-center mb-20 tracking-[0.5em] uppercase">Intelligence Modules</h2>
-        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-6 px-4">
-            <div class="relative">
-                <img src="me4.png" class="w-full h-64 object-cover border border-blue-500/20" alt="M1">
-                <div class="mt-4 orbitron text-[10px] text-blue-400 tracking-tighter uppercase text-center font-bold">Anti-Honeypot Protocol</div>
+    <section style="background-image: linear-gradient(rgba(1,1,3,0.9), rgba(1,1,3,0.9)), url('web4.png');" class="flex-col justify-center">
+        <div class="watermark" style="bottom: 10%; left: 5%;">MISSION</div>
+        <h2 class="orbitron text-4xl text-center mb-16 text-white uppercase tracking-[0.5em]">Ultimate Goals</h2>
+        <div class="grid md:grid-cols-4 gap-6 w-full max-w-7xl mx-auto">
+            <div class="glow-card p-8 rounded-[30px] border border-cyan-500/20">
+                <h5 class="orbitron text-cyan-400 text-xs mb-4 uppercase">Phase 1</h5>
+                <p class="text-[10px] text-gray-400 uppercase tracking-widest leading-relaxed">Neural Intent Engine & opBNB Integration Launch.</p>
             </div>
-            <div class="relative">
-                <img src="me5.png" class="w-full h-64 object-cover border border-red-500/20" alt="M2">
-                <div class="mt-4 orbitron text-[10px] text-red-400 tracking-tighter uppercase text-center font-bold">Rug-Pull Detection</div>
+            <div class="glow-card p-8 rounded-[30px] border border-purple-500/20">
+                <h5 class="orbitron text-purple-400 text-xs mb-4 uppercase">Phase 2</h5>
+                <p class="text-[10px] text-gray-400 uppercase tracking-widest leading-relaxed">Web Dashboard & AI Sentiment Analysis Hub.</p>
             </div>
-            <div class="relative">
-                <img src="me6.png" class="w-full h-64 object-cover border border-green-500/20" alt="M3">
-                <div class="mt-4 orbitron text-[10px] text-green-400 tracking-tighter uppercase text-center font-bold">Whale Behavior Tracker</div>
+            <div class="glow-card p-8 rounded-[30px] border border-green-500/20">
+                <h5 class="orbitron text-green-400 text-xs mb-4 uppercase">Phase 3</h5>
+                <p class="text-[10px] text-gray-400 uppercase tracking-widest leading-relaxed">Autonomous RPC Shield & Cross-Chain Protection.</p>
+            </div>
+            <div class="glow-card p-8 rounded-[30px] border border-red-500/20">
+                <h5 class="orbitron text-red-500 text-xs mb-4 uppercase">Phase 4</h5>
+                <p class="text-[10px] text-gray-400 uppercase tracking-widest leading-relaxed">Mobile Security Apex & Global Standard Deployment.</p>
             </div>
         </div>
     </section>
 
-    <section class="py-32 px-4 text-center">
-        <h2 class="orbitron text-4xl mb-16 tracking-[0.4em] uppercase">The Ultimate Vision</h2>
-        <div class="max-w-4xl mx-auto mb-20">
-            <p class="italic text-gray-400 text-sm leading-loose tracking-widest uppercase">
-                "We are building a future where your capital is protected by neural code. No more manual audits. No more uncertainty."
-            </p>
-        </div>
-        <div class="max-w-6xl mx-auto grid grid-cols-3 gap-4">
-            <img src="me7.png" class="opacity-40 hover:opacity-100 transition" alt="V1">
-            <img src="me8.png" class="opacity-40 hover:opacity-100 transition" alt="V2">
-            <img src="me9.png" class="opacity-40 hover:opacity-100 transition" alt="V3">
+    <section style="background-image: linear-gradient(rgba(1,1,3,0.8), rgba(1,1,3,0.8)), url('web7.png');" class="flex-col justify-center text-center">
+        <div class="watermark" style="top: 0; right: -10%;">SHIELD</div>
+        <div class="glass p-20 max-w-5xl">
+            <h2 class="orbitron text-8xl md:text-9xl font-black mb-12 uppercase italic tracking-tighter">VIBE<span class="gradient-text">GUARD</span></h2>
+            <div class="flex flex-wrap justify-center gap-8 mb-16">
+                <a href="https://t.me/VibeGuard_AI_bot" target="_blank" class="px-16 py-8 bg-cyan-600 rounded-full orbitron font-bold text-2xl hover:shadow-[0_0_40px_#00f3ff] transition-all text-white uppercase tracking-widest">Connect Sentinel</a>
+            </div>
+            <p class="orbitron text-[9px] text-gray-700 tracking-[8px] uppercase">Neural Sentinel // opBNB Mainnet Guardian // 2026</p>
         </div>
     </section>
-
-    <footer class="py-20 text-center border-t border-white/5 bg-black/80">
-        <p class="orbitron text-[10px] text-gray-700 uppercase tracking-[1em]">VibeGuard AI // 2026 // Neural Security Layer</p>
-    </footer>
 
 </body>
 </html>
