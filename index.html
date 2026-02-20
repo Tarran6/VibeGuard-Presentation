@@ -16,6 +16,7 @@
 
     <link rel="preload" href="web.png" as="image">
     <link rel="preload" href="web8.png" as="image">
+    <link rel="icon" href="https://vibe-guard-presentation.vercel.app/web8.png" type="image/png"> <!-- Добавил favicon для +1000500 polish -->
 
     <style>
         :root { --neon-cyan: #00f3ff; --neon-red: #ff003c; --neon-green: #39ff14; }
@@ -63,17 +64,22 @@
         .status-pulse { width: 10px; height: 10px; background: var(--neon-green); border-radius: 50%; box-shadow: 0 0 15px var(--neon-green); animation: pulse 1.5s infinite; }
         @keyframes pulse { 0% { transform: scale(1); opacity: 1; } 100% { transform: scale(3.5); opacity: 0; } }
 
-        img { loading: lazy; }
+        /* Добавил noise overlay для +1000500 cyber-vibe */
+        .noise { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: url('https://grainy-gradients.vercel.app/noise.svg'); opacity: 0.05; pointer-events: none; z-index: 1; }
+
+        img { loading: lazy; } /* Lazy loading для всех img */
 
         @media (max-width: 768px) { 
             .glass { padding: 1.5rem; } 
             .syncopate { font-size: 1.5rem; } 
             .subliminal { display: none; } 
+            .stat-mini-card { padding: 1rem; } /* Улучшил мобильную responsive */
         }
     </style>
 </head>
 <body>
     <div id="cursor-glow"></div>
+    <div class="noise"></div> <!-- Добавил noise для gritty feel -->
     <div class="subliminal" style="top:15%; left:10%;">99.8% ACCURACY</div>
     <div class="subliminal" style="bottom:20%; right:15%;">NEURAL SUPREMACY</div>
 
@@ -168,7 +174,10 @@
 
     <section style="background-image: url('web7.png');">
         <div class="glass text-center border-white/10">
-            <img src="bot-screen.png" class="max-w-2xl mx-auto mb-12 rounded-xl shadow-2xl border border-white/5 opacity-80" alt="VibeGuard Sentinel Real-Time Neural Verdict Demo">
+            <div class="relative max-w-2xl mx-auto mb-12">
+                <img src="bot-screen.png" class="rounded-xl shadow-2xl border border-white/5 opacity-80 w-full" alt="VibeGuard Sentinel Real-Time Neural Verdict Demo">
+                <div class="absolute bottom-4 left-4 bg-red-600/80 px-4 py-2 rounded text-white font-bold text-xs uppercase tracking-widest">DANGER: Honeypot Detected – Avoid Signing</div> <!-- Добавил overlay для +1000500 impact -->
+            </div>
             <p class="text-[9px] text-gray-500 uppercase tracking-widest mb-10">Real-Time Neural Verdict Example – DANGER Detected</p>
             
             <h2 class="syncopate text-3xl md:text-6xl mb-10 uppercase tracking-tighter">SECURE YOUR ASSETS</h2>
